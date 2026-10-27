@@ -42,13 +42,13 @@ details{border-radius:20px;padding:14px 20px;margin-bottom:12px}summary{cursor:p
 footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 16px}
 .req{margin:0;padding-left:22px}.req li{margin:8px 0;color:var(--ink)}
 .steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px}
-.steps li{counter-increment:s;position:relative;padding:20px 22px 20px 72px;border-radius:26px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--edge);box-shadow:var(--shadow),inset 0 1px 0 var(--edge)}
-.steps li::before{content:counter(s);position:absolute;left:20px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:600}
+.steps>li{counter-increment:s;position:relative;padding:20px 22px 20px 72px;border-radius:26px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--edge);box-shadow:var(--shadow),inset 0 1px 0 var(--edge)}
+.steps>li::before{content:counter(s);position:absolute;left:20px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:600}
 .steps h3{margin:0 0 4px;font-size:19px;font-weight:600}.steps p{margin:0;color:var(--muted)}
 .done{margin-top:16px;background:rgba(52,199,89,.18)}
 .video{position:relative;padding-top:56.25%;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--edge)}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-@media(max-width:560px){.steps li{padding:18px 16px 18px 62px}.steps li::before{left:14px;top:18px}}
+@media(max-width:560px){.steps>li{padding:18px 16px 18px 62px}.steps>li::before{left:14px;top:18px}}
 .rules{margin-top:12px;padding:14px 16px;border-radius:18px;background:var(--glass2);border:1px solid var(--edge)}.rules ol{margin:8px 0 0;padding-left:22px;color:var(--muted)}.rules li{margin:4px 0}
 </style>
 </head>
