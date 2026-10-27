@@ -40,6 +40,15 @@ details{border-radius:20px;padding:14px 20px;margin-bottom:12px}summary{cursor:p
 #f input{flex:1;padding:13px 18px;border-radius:99px;border:1px solid var(--line);background:var(--glass2);color:var(--ink);font-size:17px;outline:none}
 .chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 10px}.chips button{border:1px solid var(--edge);background:var(--glass2);color:var(--ink);border-radius:99px;padding:8px 14px;cursor:pointer;font-size:15px}
 footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 16px}
+.req{margin:0;padding-left:22px}.req li{margin:8px 0;color:var(--ink)}
+.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px}
+.steps li{counter-increment:s;position:relative;padding:20px 22px 20px 72px;border-radius:26px;background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(180%);backdrop-filter:blur(24px) saturate(180%);border:1px solid var(--edge);box-shadow:var(--shadow),inset 0 1px 0 var(--edge)}
+.steps li::before{content:counter(s);position:absolute;left:20px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-weight:600}
+.steps h3{margin:0 0 4px;font-size:19px;font-weight:600}.steps p{margin:0;color:var(--muted)}
+.done{margin-top:16px;background:rgba(52,199,89,.18)}
+.video{position:relative;padding-top:56.25%;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--edge)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:560px){.steps li{padding:18px 16px 18px 62px}.steps li::before{left:14px;top:18px}}
 </style>
 </head>
 <body>
@@ -49,21 +58,38 @@ footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 16px}
 </nav></header>
 <main>
 <div class="hero">
-<h1>Obtén tu Constancia de Situación Fiscal en minutos</h1>
-<p>Una guía práctica, un mini curso con evaluación y un asistente con IA que resuelve tus dudas en cualquier momento.</p>
-<p><a class="btn" href="#guia">Empezar ahora</a> <a class="btn alt" href="#asistente">Preguntar al asistente</a></p>
+<h1>Tu Constancia de Situación Fiscal, paso a paso</h1>
+<p>Trámite en línea con SAT ID: 7 pasos sencillos, un video y un asistente con IA para resolver tus dudas.</p>
+<p><a class="btn" href="#guia">Ver los pasos</a> <a class="btn alt" href="#asistente">Preguntar al asistente</a></p>
 </div>
 
 <section id="guia">
-<h2>Guía paso a paso</h2>
-<div class="grid">
-<div class="card"><span class="num">1</span><h3>Ten a la mano tu RFC</h3><p>Es la clave de 12 o 13 caracteres que aparece en tu inscripción al SAT o en tus facturas.</p></div>
-<div class="card"><span class="num">2</span><h3>Reúne tu acceso</h3><p>Necesitas tu contraseña del SAT (antes CIEC) o tu e.firma. Si no la recuerdas, puedes recuperarla en el portal.</p></div>
-<div class="card"><span class="num">3</span><h3>Entra al portal</h3><p>Ve a <a href="https://www.sat.gob.mx" target="_blank" rel="noopener">sat.gob.mx</a> y busca "Genera tu Constancia de Situación Fiscal".</p></div>
-<div class="card"><span class="num">4</span><h3>Inicia sesión y genera</h3><p>Captura tu RFC y contraseña. El documento se genera al instante en formato PDF, sin costo.</p></div>
-<div class="card"><span class="num">5</span><h3>Descarga y verifica</h3><p>Revisa que tu nombre, régimen y domicilio fiscal sean correctos. Guarda el PDF; incluye código QR para validarlo.</p></div>
-</div>
-<div class="note">⚠️ Los trámites pueden cambiar. Confirma siempre en <a href="https://www.sat.gob.mx" target="_blank" rel="noopener">sat.gob.mx</a> o al 55 627 22 728. Este sitio es una ayuda independiente y no pertenece al SAT.</div>
+<h2>Requisitos previos</h2>
+<div class="card"><ul class="req">
+<li>Tu <b>RFC</b> de 13 dígitos.</li>
+<li>Un <b>correo electrónico personal</b> al que tengas acceso.</li>
+<li>Tu <b>número de celular</b>.</li>
+<li>Una <b>identificación oficial vigente con fotografía</b> (INE, pasaporte o cédula profesional).</li>
+<li>Un <b>dispositivo con cámara</b> para grabar un video corto.</li>
+</ul></div>
+
+<h2 style="margin-top:36px">Paso a paso</h2>
+<p style="color:var(--muted);margin-top:-8px">El trámite se hace 100% en línea en la plataforma oficial SAT ID. <a class="btn" style="margin-left:6px;padding:8px 18px;font-size:15px" href="https://satid.sat.gob.mx/" target="_blank" rel="noopener">Abrir SAT ID</a></p>
+<ol class="steps">
+<li><h3>Ingresa a la plataforma</h3><p>Entra a <a href="https://satid.sat.gob.mx/" target="_blank" rel="noopener">satid.sat.gob.mx</a>, elige <b>"Constancia de situación fiscal con CIF"</b> y da clic en <b>Comenzar</b>.</p></li>
+<li><h3>Acepta los términos y condiciones</h3><p>Lee la información en pantalla y selecciona <b>Continuar</b>.</p></li>
+<li><h3>Registra tus datos</h3><p>Escribe tu RFC y tu correo. Si quieres, marca la casilla para recibir tu constancia cada mes durante un año. Captura el texto de la imagen (captcha) y da clic en <b>Continuar</b>.</p></li>
+<li><h3>Confirma tu correo</h3><p>Te llegará un código a tu correo. Escríbelo en la plataforma para avanzar. Si no lo ves, revisa la carpeta de spam.</p></li>
+<li><h3>Sube tu identificación oficial</h3><p>Elige el tipo de documento (por ejemplo, INE) y toma o adjunta fotos claras de <b>ambos lados</b> de tu identificación original.</p></li>
+<li><h3>Graba tu video de verificación</h3><p>La pantalla te mostrará una frase. Grábate sosteniendo tu identificación junto a tu rostro y di la frase en voz alta. Hazlo en un lugar bien iluminado, sin sombras ni reflejos.</p></li>
+<li><h3>Firma y envía tu solicitud</h3><p>Dibuja tu firma en el recuadro y selecciona <b>Aceptar</b>. <b>Guarda tu número de folio</b> para dar seguimiento.</p></li>
+</ol>
+<div class="card done">✅ <b>¡Listo!</b> El SAT revisará tu solicitud y te enviará la Constancia en PDF a tu correo en aproximadamente <b>5 días hábiles</b>.</div>
+
+<h2 style="margin-top:36px">Mira el video</h2>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/gbmUumhxD-4" title="Cómo tramitar la Constancia de Situación Fiscal en SAT ID" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>
+
+<div class="note">⚠️ Los trámites pueden cambiar. Confirma siempre en <a href="https://www.sat.gob.mx" target="_blank" rel="noopener">sat.gob.mx</a> o al 55 627 22 728. Este sitio es una ayuda independiente y no pertenece al SAT. Nunca compartas tu folio o tus datos con terceros.</div>
 </section>
 
 <section id="curso">
@@ -81,7 +107,7 @@ footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 16px}
 <h2>Asistente con IA</h2>
 <div class="card" style="padding:0">
 <div id="chat">
-<div id="log"><div class="msg a">¡Hola! Soy tu asistente para la Constancia de Situación Fiscal. ¿En qué te ayudo? Nunca me compartas contraseñas ni tu e.firma.</div></div>
+<div id="log"><div class="msg a">¡Hola! Soy tu asistente para tramitar la Constancia de Situación Fiscal en SAT ID. ¿En qué te ayudo? Por seguridad, no me compartas tu RFC completo, folio ni datos de tu identificación.</div></div>
 <div class="chips" id="chips"></div>
 <form id="f"><input id="q" placeholder="Escribe tu pregunta…" autocomplete="off" maxlength="500"><button class="btn">Enviar</button></form>
 </div></div>
@@ -89,35 +115,36 @@ footer{text-align:center;color:var(--muted);font-size:15px;padding:24px 16px}
 
 <section id="faq">
 <h2>Preguntas frecuentes</h2>
-<details><summary>¿Qué es la Constancia de Situación Fiscal?</summary><p>Es el documento del SAT que muestra tu RFC, régimen fiscal, obligaciones, actividades y domicilio fiscal.</p></details>
-<details><summary>¿Cuánto cuesta?</summary><p>Generarla en línea es gratuito.</p></details>
-<details><summary>¿Tiene vigencia?</summary><p>El SAT no le pone fecha de caducidad, pero muchas empresas y bancos piden que sea reciente (por ejemplo, de máximo 3 meses).</p></details>
-<details><summary>¿Es lo mismo que la Opinión de Cumplimiento?</summary><p>No. La Opinión de Cumplimiento indica si estás al corriente con tus obligaciones; la Constancia describe tu situación registrada.</p></details>
-<details><summary>No tengo contraseña ni e.firma, ¿qué hago?</summary><p>Puedes tramitar tu contraseña en el SAT. Agenda cita en citas.sat.gob.mx o recupérala en línea si aplica.</p></details>
+<details><summary>¿Cuánto cuesta?</summary><p>El trámite en SAT ID no tiene costo.</p></details>
+<details><summary>¿Cuánto tarda?</summary><p>Alrededor de 5 días hábiles; el SAT te la envía en PDF a tu correo.</p></details>
+<details><summary>No me llega el código de confirmación</summary><p>Revisa tu bandeja de spam o correo no deseado, confirma que escribiste bien tu correo y vuelve a solicitarlo.</p></details>
+<details><summary>Mi video o mi identificación fueron rechazados</summary><p>Usa buena iluminación, sin reflejos ni sombras, que se lea todo el texto de la identificación y que tu rostro se vea completo. Vuelve a intentarlo.</p></details>
+<details><summary>Perdí mi número de folio</summary><p>Búscalo en tu correo o comunícate al SAT al 55 627 22 728.</p></details>
+<details><summary>¿Y si tengo mi contraseña del SAT o e.firma?</summary><p>Entonces puedes generar la constancia al instante en el portal del SAT, sin SAT ID.</p></details>
 </section>
 </main>
-<footer>Sitio informativo independiente · No compartas nunca tu contraseña ni tu e.firma.</footer>
+<footer>Sitio informativo independiente · No compartas nunca tu folio, contraseñas ni datos de tu identificación.</footer>
 
 <script>
 const MODS=[
-["Qué es la Constancia de Situación Fiscal","Documento oficial del SAT con tu RFC, régimen, obligaciones y domicilio fiscal."],
-["Para qué la piden","Abrir cuentas bancarias, facturar, trámites de empleo y proveedores."],
-["Qué necesitas para generarla","Tu RFC y tu contraseña del SAT o e.firma."],
-["Cómo generarla en línea","Portal del SAT, inicio de sesión y descarga del PDF."],
-["Cómo leer tu constancia","Régimen fiscal, actividades económicas, fecha de inicio y domicilio."],
-["Datos incorrectos y actualización","Qué hacer si algo está mal: actualizar en el SAT con cita o en línea."]];
+["Reúne tus requisitos","RFC de 13 dígitos, correo personal, celular, identificación oficial vigente y un dispositivo con cámara."],
+["Entra a SAT ID","Abre satid.sat.gob.mx, elige \"Constancia de situación fiscal con CIF\" y da clic en Comenzar."],
+["Registra tus datos y confirma tu correo","RFC, correo, captcha y el código que te llega por correo."],
+["Sube tu identificación","Fotos legibles de anverso y reverso de tu identificación original."],
+["Graba tu video","Sostén tu identificación junto a tu rostro y di la frase en voz alta, con buena luz."],
+["Firma, envía y espera","Dibuja tu firma, guarda tu folio y espera el PDF en tu correo (unos 5 días hábiles)."]];
 const done=JSON.parse(localStorage.getItem('efm')||'[]');
 const mods=document.getElementById('mods');
 MODS.forEach((m,i)=>{const d=document.createElement('label');d.className='mod';d.style.margin='10px 0';
 d.innerHTML=`<input type="checkbox" ${done.includes(i)?'checked':''}><span><b>${i+1}. ${m[0]}</b><br><span style="color:var(--muted)">${m[1]}</span></span>`;
 d.querySelector('input').onchange=e=>{const s=new Set(done);e.target.checked?s.add(i):s.delete(i);done.length=0;done.push(...s);localStorage.setItem('efm',JSON.stringify(done));prog()};mods.append(d)});
 function prog(){const p=Math.round(done.length/MODS.length*100);pct.textContent=p+'% completado'+(p==100?' 🎉':'');pbar.style.width=p+'%'}prog();
-const QZ=[["¿Cuánto cuesta generar la constancia en el portal del SAT?",["$100","Es gratuita","$300"],1],["¿Qué necesitas para generarla en línea?",["Solo tu nombre","RFC y contraseña o e.firma","Cita obligatoria"],1],["¿En qué formato se descarga?",["PDF","Papel únicamente","Foto"],0],["¿Qué puedes revisar en ella?",["Régimen y domicilio fiscal","Tu saldo bancario","Tu historial médico"],0]];
+const QZ=[["¿Cuántos dígitos tiene el RFC que necesitas?",["10","13","18"],1],["¿Qué opción eliges en SAT ID?",["Constancia de situación fiscal con CIF","Cita presencial","Devolución de impuestos"],0],["¿Qué haces en el video de verificación?",["Cantar","Sostener tu identificación junto a tu rostro y decir la frase","Mostrar tu domicilio"],1],["¿Cuánto tarda en llegar tu constancia?",["Unos 5 días hábiles","Al instante en pantalla","3 meses"],0],["¿Qué debes guardar al terminar?",["Tu número de folio","Tu contraseña bancaria","Nada"],0]];
 const quiz=document.getElementById('quiz');
 QZ.forEach((q,i)=>{const w=document.createElement('div');w.innerHTML=`<p><b>${i+1}. ${q[0]}</b></p>`;
 q[1].forEach((o,j)=>{const l=document.createElement('label');l.innerHTML=`<input type="radio" name="q${i}"> ${o}`;l.onclick=()=>{w.querySelectorAll('label').forEach(x=>x.className='');l.className=j==q[2]?'ok':'bad'};w.append(l)});quiz.append(w)});
 const log=document.getElementById('log'),hist=[];
-["¿Qué necesito para sacar mi constancia?","¿Qué hago si no recuerdo mi contraseña?","¿Mis datos salen incorrectos, qué hago?"].forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>send(t);chips.append(b)});
+["¿Qué necesito para empezar?","No me llega el código a mi correo","¿Cómo grabo bien mi video?"].forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>send(t);chips.append(b)});
 function add(c,t){const d=document.createElement('div');d.className='msg '+c;d.textContent=t;log.append(d);log.scrollTop=log.scrollHeight;return d}
 async function send(t){if(!t.trim())return;add('u',t);hist.push({role:'user',content:t});q.value='';const w=add('a','Escribiendo…');
 try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:hist})});const j=await r.json();
